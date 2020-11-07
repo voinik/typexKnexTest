@@ -1,0 +1,27 @@
+{
+  "name": "typedknextest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc -incremental -p tsconfig.backend.json",
+    "reset": "rm -rf build && npm run build",
+    "start": "node build/createDatabase.js && node build/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@wwwouter/typed-knex": "2.18.1",
+    "knex": "^0.21.12",
+    "pg": "^8.4.2",
+    "reflect-metadata": "^0.1.13",
+    "typescript": "4.0.5",
+    "uuid": "^8.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.6",
+    "@types/pg": "^7.14.6",
+    "@types/uuid": "^8.3.0"
+  }
+}
